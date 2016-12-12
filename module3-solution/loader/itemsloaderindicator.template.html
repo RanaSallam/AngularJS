@@ -1,0 +1,12 @@
+<div class="loader">
+	<ol>
+		<li ng-repeat="item in NarrowItDown.found">
+			{{ item.name }}
+			<button ng-click="NarrowItDown.removeItem($index);">Remove Item</button>
+		</li>
+	</ol>
+
+	<!-- <div ng-if="list.errorMessage" class="error">Error: {{list.errorMessage}}</div> -->
+	
+
+</div>
