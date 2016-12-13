@@ -9,11 +9,12 @@ angular.module('NarrowItDownApp', [])
 
 function FoundItems() {
   var ddo = {
-    templateUrl: 'loader/itemsloaderindicator.template.html',
     scope: {
+      list: '=myList',
       found: '<',
       onRemove: '&',
     },
+    templateUrl: 'loader/itemsloaderindicator.template.html',
   };
 
   return ddo;
