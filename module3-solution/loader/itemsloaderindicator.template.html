@@ -1,12 +1,22 @@
 <div class="loader">
-	<ol>
-		<li ng-repeat="item in NarrowItDown.found">
-			{{ item.name }}
-			<button ng-click="NarrowItDown.removeItem($index);">Remove Item</button>
-		</li>
-	</ol>
-
-	<!-- <div ng-if="list.errorMessage" class="error">Error: {{list.errorMessage}}</div> -->
-	
-
 </div>
+<br><br>
+<table class="table" ng-if="list.found.length > 0">
+    <thead>
+      	<tr>
+	     	<th>Name</th>
+	     	<th>Short_Name</th>
+	        <th>Description</th>
+	        <th></th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<tr ng-repeat="item in list.found">
+			<td>{{ item.name }}</td> 
+			<td>{{ item.short_name}}</td> 
+			<td>{{item.description}}</td>
+			<td><button ng-click="onRemove({index: $index});">Don't want this one!</button></td>
+		</tr>
+    </tbody>
+</table>
+<div ng-if="!list.found.length && list.flag" class="error" style="color:red;">Nothing found</div>
