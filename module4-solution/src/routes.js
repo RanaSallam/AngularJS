@@ -24,12 +24,10 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'CategoriesController as categories',
     resolve: {
       allCategories: ['MenuDataService', function (MenuDataService) {
-        console.log(MenuDataService.returnCategories());
-        return MenuDataService.returnCategories();
+        return MenuDataService.getAllCategories();
       }]
     }
-  })
-  ;
+  });
 
 }
 

@@ -9,12 +9,7 @@ function MenuDataService($http) {
   var service = this;
 
   // List of menu items categories
-   var allCategories = [];
-
-  service.returnCategories = function () {
-    service.getAllCategories();
-    return allCategories;
-  } 
+  var allCategories = [];
 
   service.getAllCategories = function () {
     var response = $http({
@@ -24,8 +19,9 @@ function MenuDataService($http) {
     
     return response.then(function (result) {
         for (var i = 0; i < result.data.length; i++) {
-          allCategories.push(result.data[i].name);
-        };
+          allCategories.push(result.data[i]);
+        }
+        return allCategories;
     });
 
   };
