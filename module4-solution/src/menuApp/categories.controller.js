@@ -1,14 +1,16 @@
 (function () {
 'use strict';
 
-angular.module('MenuApp')
+angular.module('data')
 .controller('CategoriesController', CategoriesController);
 
 
-CategoriesController.$inject = ['MenuDataService', 'allCategories'];
-function CategoriesController(MenuDataService, allCategories) {
+CategoriesController.$inject = ['allCategories'];
+function CategoriesController(allCategories) {
   var categories = this;
   categories.allCategories = allCategories;
+  console.log(categories.allCategories);
+  // check hna el console
 }
 
 })();
