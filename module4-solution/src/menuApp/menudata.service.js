@@ -8,9 +8,6 @@ MenuDataService.$inject = ['$http'];
 function MenuDataService($http) {
   var service = this;
 
-  // List of menu items categories
-  var allCategories = [];
-
   service.getAllCategories = function () {
     var response = $http({
       method: "GET",
@@ -18,10 +15,7 @@ function MenuDataService($http) {
     });
     
     return response.then(function (result) {
-        for (var i = 0; i < result.data.length; i++) {
-          allCategories.push(result.data[i]);
-        }
-        return allCategories;
+        return result.data;
     });
 
   };
