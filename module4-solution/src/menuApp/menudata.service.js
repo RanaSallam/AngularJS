@@ -26,16 +26,16 @@ function MenuDataService($http) {
 
   };
 
-  // service.getItemsForCategory = function(categoryShortName) {
-  //   var response = $http({
-  //     method: "GET",
-  //     url: ("https://davids-restaurant.herokuapp.com/menu_items.json?category={categoryShortName}"),
-  //   });
+  service.getItemsForCategory = function(categoryShortName) {
+    var response = $http({
+      method: "GET",
+      url: ("https://davids-restaurant.herokuapp.com/menu_items.json?category=" + categoryShortName),
+    });
     
-  //   return response.then(function (result) {
-  //     console.log(result);
-  //   });
-  // }
+    return response.then(function (result) {
+      return result.data.menu_items;
+    });
+  }
 
 }
 

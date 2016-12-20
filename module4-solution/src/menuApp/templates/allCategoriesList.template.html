@@ -1,6 +1,6 @@
-<ul>
-	HII
-  <li ng-repeat="item in $ctrl.allCategories">
-		{{ item.name }}
+<ol>
+  <li ng-repeat="item in $ctrl.category">
+		{{ item.name }}, click here : 
+		<a ui-sref="items({shortName: item.short_name })">( {{item.short_name}} )</a>
   </li>
-</ul>
+</ol>
