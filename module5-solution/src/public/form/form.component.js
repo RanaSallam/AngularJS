@@ -9,16 +9,4 @@ angular.module('public')
   }
 });
 
-
-// SignupformController.$inject = ['favDish'];
-// function SignupformController(favDish) {
-//   var signup = this;
-
-//   signup.submit = function () {
-//     console.log('TRUE FORM, KINDLY SAVE THE DATA!')
-//   };
-//   signup.favDish = favDish;
-//   // console.log("From controller: " + signup.favDish);
-// }
-
 })();

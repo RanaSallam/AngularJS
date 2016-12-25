@@ -1,9 +1,8 @@
-<h1>HELLO</h1>
-<!-- 
-<ul>
-	HII
-  <li ng-repeat="item in $ctrl.allCategories">
-		{{ item.name }}
-  </li>
-</ul>
- -->
+<select class="form-control" name="favdish" ng-model="signup.user.favdish"
+	      					required>
+	<option value="">Please select</option>
+	<option value="{{ item.short_name }}" ng-repeat="item in $ctrl.favdish">
+		{{ item.short_name }}) {{ item.name }}
+	</option>
+</select>
+	          	

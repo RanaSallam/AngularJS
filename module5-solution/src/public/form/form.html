@@ -52,15 +52,11 @@
 
 			<div class="form-group">
 	          	<label>Favourite dish</label>
-	          	<select class="form-control" name="favdish" ng-model="signup.user.favdish"
-	      					required>
-					<option value="">Please select</option>
-					<categories-list allCategories="categories.allCategories"></categories-list>
-
-	          	</select>
+				<signup-form favdish="signup.favDish"></signup-form>
+	          	
           	</div>
           	<br>
-
+          	
     		<button class="btn btn-default" ng-disabled="signupForm.$invalid"
       				ng-click="signup.submit()">Submit</button>
 
@@ -70,10 +66,5 @@
 			<br>
       	</form>
     </fieldset>
-<!-- 
-  <menu-category ng-repeat="menuCategory in menuCtrl.menuCategories"
-                 category="menuCategory">
-  </menu-category> -->
-
 </div>
 
