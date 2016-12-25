@@ -9,7 +9,7 @@ CategoriesController.$inject = ['allCategories'];
 function CategoriesController(allCategories) {
   var categories = this;
   categories.allCategories = allCategories;
-  console.log(categories.allCategories, "From categories controller");
+  // console.log(categories.allCategories, "From categories controller");
 }
 
 })();
