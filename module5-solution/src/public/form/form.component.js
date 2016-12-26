@@ -3,7 +3,7 @@
 
 angular.module('public')
 .component('signupForm', {
-  templateUrl: 'src/public/form/fav-dish.html',
+  templateUrl: '',
   bindings: {
     favdish: '<'
   }

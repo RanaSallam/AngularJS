@@ -27,12 +27,6 @@ function MenuService($http, ApiPath) {
     });
   };
 
-  service.getFavDish = function () {
-    return $http.get(ApiPath + '/menu_items.json').then(function (response) {
-      return (response.data)['menu_items'];
-    });
-  };
-
 }
 
 

@@ -51,8 +51,14 @@
           	<br>
 
 			<div class="form-group">
-	          	<label>Favourite dish</label>
-				<signup-form favdish="signup.favDish"></signup-form>
+	          	<label>Specify the menu number of your favourite dish (e.g. L27)</label>
+	          	<input class="form-control" type="text" name="dish" ng-model="signup.user.dish" required>
+	          	<span ng-if="signupForm.dish.$error.required && signupForm.dish.$touched">
+            		Fill in the field with the required format 
+	          	</span>
+	          	<span ng-if="signup.item.length == 0 && signupForm.$valid">
+	          		{{signup.errmsg}}
+	          	</span>
 	          	
           	</div>
           	<br>
@@ -63,6 +69,9 @@
 			<div style="margin-top: 10px;">
 				Form valid? {{ signupForm.$valid }}
 			</div>
+			<span ng-if="signup.item.length > 0 && signupForm.$valid">
+	          		{{signup.savedmsg}}
+	          	</span>
 			<br>
       	</form>
     </fieldset>

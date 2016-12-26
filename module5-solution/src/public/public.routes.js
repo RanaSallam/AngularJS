@@ -47,8 +47,9 @@ function routeConfig ($stateProvider) {
       controller: 'SignupformController',
       controllerAs: 'signup',
       resolve: {
-        favDish: ['MenuService', function (MenuService) {
-          return MenuService.getFavDish();
+        favDish: ['FormService', function (FormService) {
+          console.log('resolve: ' ,FormService.getFavMenuItem());
+          return FormService.getFavMenuItem();
         }]
       }
     });
