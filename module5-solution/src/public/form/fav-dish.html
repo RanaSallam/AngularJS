@@ -1,8 +1,4 @@
-<select class="form-control" name="favdish" ng-model="signup.user.favdish"
-	      					required>
-	<option value="">Please select</option>
-	<option value="{{ item.short_name }}" ng-repeat="item in $ctrl.favdish">
-		{{ item.short_name }}) {{ item.name }}
-	</option>
+<select class="form-control" name="dish" ng-model="signup.user.dish" required>
+	<option ng-repeat="item in $ctrl.favdish">{{ item.short_name }}</option>
 </select>
 	          	

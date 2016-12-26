@@ -8,9 +8,10 @@ SignupformController.$inject = ['favDish'];
 function SignupformController(favDish) {
   var signup = this;
   signup.favDish = favDish;
+  signup.user = { firstname: "", lastname: "", email: "", phone: "", dish: ""};
   
   signup.submit = function () {
-    console.log('TRUE FORM, KINDLY SAVE THE DATA!')
+    console.log('TRUE FORM:', signup.user);
   };
 }
 

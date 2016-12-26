@@ -112,6 +112,12 @@ h3.menu-item-title {
   font-style: italic;
 }
 /* END SINGLE CATEGORY PAGE */
+/* SIGN UP PAGE*/
+#signupForm {
+  width: 500px;
+  margin: 0 auto;
+}
+/* END SIGN UP PAGE*/
 
 
 /********** Large devices only **********/
