@@ -1,6 +1,24 @@
 <h1 class="text-center">User Info</h1>
-First Name: {{info.infoData.firstname}}
-Last Name: {{info.infoData.lastname}}
-Email: {{info.infoData.email}}
-Phone: {{info.infoData.phone}}
-Favourite Dish: 
+</br>
+<div ng-if="info.flag == true" class="text-center">
+	First Name: {{info.infoData.firstname}} </br>
+	Last Name: {{info.infoData.lastname}} </br>
+	Email: {{info.infoData.email}} </br>
+	Phone: {{info.infoData.phone}} </br>
+	Favourite Dish: </br></br>
+	<img width="200" height="200" ng-src="images/menu/{{info.dish.pic}}/{{info.dish.pic}}.jpg">
+	</br></br>
+	{{info.dish.title}}
+	</br>
+	{{info.dish.description}}
+
+</div>
+
+<div ng-if="!info.flag" class="text-center">Not Signed Up Yet. 
+	<a ui-sref="public.form">Sign up Now!</a>
+<div>
+	
+</br>
+</br>
+</br>
+</br>

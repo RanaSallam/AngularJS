@@ -35,10 +35,15 @@ function FormService($http, ApiPath) {
   }
 
   service.dishInfo = function () {
-    var shortName = service.items.short_name;
-    return $http.get(ApiPath + '/menu_items/'+ shortName +'.json').then(function (response) {
-      return response.data;
-    });
+    if(service.items)
+    {
+      var shortName = service.items.short_name;
+        return $http.get(ApiPath + '/menu_items/'+ shortName +'.json').then(function (response) {
+          return response.data;
+        });
+    }
+    else
+      return false;
   }
 
 }
