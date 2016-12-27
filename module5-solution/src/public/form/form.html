@@ -56,7 +56,7 @@
 	          	<span ng-if="signupForm.dish.$error.required && signupForm.dish.$touched">
             		Fill in the field with the required format 
 	          	</span>
-	          	<span ng-if="signup.item.length == 0 && signupForm.$valid">
+	          	<span id="errmsg" ng-if="!signup.item && signupForm.$valid">
 	          		{{signup.errmsg}}
 	          	</span>
 	          	
@@ -69,7 +69,7 @@
 			<div style="margin-top: 10px;">
 				Form valid? {{ signupForm.$valid }}
 			</div>
-			<span ng-if="signup.item.length > 0 && signupForm.$valid">
+			<span id="savedmsg" ng-if="signup.item && signupForm.$valid">
 	          		{{signup.savedmsg}}
 	          	</span>
 			<br>

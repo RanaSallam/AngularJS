@@ -45,13 +45,19 @@ function routeConfig ($stateProvider) {
       url: '/signup',
       templateUrl: 'src/public/form/form.html',
       controller: 'SignupformController',
-      controllerAs: 'signup',
+      controllerAs: 'signup'
+    })
+    .state('public.info', {
+      url: '/info',
+      templateUrl: 'src/public/info/info.html',
+      controller: 'InfoController',
+      controllerAs: 'info',
       resolve: {
-        favDish: ['FormService', function (FormService) {
-          console.log('resolve: ' ,FormService.getFavMenuItem());
-          return FormService.getFavMenuItem();
+        infoData: ['FormService', function (FormService) {
+          return FormService.getUserInfo();
         }]
       }
-    });
+    })
+    ;
 }
 })();

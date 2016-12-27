@@ -112,10 +112,19 @@ h3.menu-item-title {
   font-style: italic;
 }
 /* END SINGLE CATEGORY PAGE */
+
 /* SIGN UP PAGE*/
 #signupForm {
   width: 500px;
   margin: 0 auto;
+}
+#savedmsg {
+  color: green;
+  font-weight: bold;
+}
+#errmsg {
+  color: red;
+  font-weight: bold;
 }
 /* END SIGN UP PAGE*/
 
